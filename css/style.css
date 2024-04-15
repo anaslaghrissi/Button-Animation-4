@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #bac5ec;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 19px;
+  padding: 17px 29px 17px 69px;
+  transition: 0.3s;
+  color: #fff;
+  background: #56517f;
+  box-shadow: 0 15px 25px #2b2b44;
+}
+
+button > div {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 53px;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 5px 0 0 5px;
+  background: #2b2e44;
+}
+
+button .folder {
+  width: 23px;
+  height: 27px;
+  position: relative;
+  left: 15px;
+  top: 13px;
+}
+button > div .folder:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #aca387;
+  transform: translateX(-40px, 0);
+  transition: transform 0.8s ease;
+}
+button .folder .top {
+  left: 0;
+  top: 0;
+  width: 23px;
+  height: 27px;
+  z-index: 2;
+  position: absolute;
+}
+
+button .folder .top i {
+  color: #f3e9cb;
+  font-size: 30px;
+  rotate: 90deg;
+  position: absolute;
+  top: -18px;
+  right: -19px;
+  display: block;
+  transform-origin: 0 50%;
+  transition: transform 0.8s ease;
+  transform: perspective(120px) rotateX(0deg);
+}
+
+button .folder .paper {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+button > div .folder .paper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #fff;
+  border-radius: 2px;
+  transform: translateX(-40px, 0);
+  transition: transform 0.4s ease;
+}
+button .folder .paper img {
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+  width: 33px;
+  height: 38px;
+  z-index: 1;
+}
+
+button .pencil {
+  border-radius: 1px 1px 0 0;
+  top: 12px;
+  left: 105%;
+  position: absolute;
+  z-index: 3;
+  transform-origin: 50% 19px;
+  color: #275efe;
+  transform: translateX(0);
+  transition: transform 0.4s ease;
+}
+
+button:hover .top i {
+  transform: translateY(45px) rotateX(-100deg);
+}
+button:hover .pencil {
+  transform: translateX(-28px);
+}
+button:hover .folder .paper:before {
+  transform: translate(3px, -5px);
+}
+button:hover .folder:before {
+  transform: translateX(-45px);
+}
+button:hover {
+  transform: scale(1.05);
+}
